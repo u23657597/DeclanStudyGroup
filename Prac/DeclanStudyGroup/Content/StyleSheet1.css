@@ -1,0 +1,89 @@
+﻿body {
+    background-color:lightgreen;
+
+}
+
+.StuBody {
+    background-color:green;
+}
+
+.Sec1 {
+    background-color: lightgreen;
+    padding: 5px 5px 5px 5px;
+    margin: 10px 10px 10px 10px;
+    border: 5px solid darkgreen;
+}
+
+.Sec2 {
+    background-color:white;
+    padding: 2px 2px 2px 2px;
+    margin: 20px 10px 20px 10px;
+    border: 5px solid darkgreen;
+   
+}
+
+table {
+    border: 1px solid;
+    width: 1000px;    
+    
+}
+
+td {
+    border: 1px solid;
+    padding: 20px;
+    padding: 3px 5px 3px 5px;
+}
+
+th {
+    background-color: green;
+    border: 1px solid;
+    padding: 3px 5px 3px 5px;
+    color: white;
+}
+
+button{
+    background-color:green;
+    text-decoration: none;
+    color:white;
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: black;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 15px 10px;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+      
+li a:hover {
+    background-color: limegreen;
+
+}
+
+
+p {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+h1 {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
+h2 {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}

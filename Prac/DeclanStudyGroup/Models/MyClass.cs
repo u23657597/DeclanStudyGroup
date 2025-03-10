@@ -21,5 +21,8 @@ namespace DeclanStudyGroup.Models
         [Display(Name = "Email")]
         public String Email { get; set; }
 
+        [Display(Name = "MyLink")]
+        public String MyLink { get; set; }
+
     }
 }
