@@ -1,0 +1,112 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    @*  Everywhere you see the "@" sign
+        The "@" sign bring in the C# code creating the link to the page
+    *@
+
+    @*  With <title>@ViewBag.Title - My ASP.NET Application</title>
+        we are rendering the title of the page
+        from the "called" page. So if the Viewbag title was "Foo"
+        then the Page will be called "Foo" as called from the ViewBag on
+        Index.cshtml. In this case it is called "Home Page" as well as "Foo".
+        Depending on which view you are accessing, the title of the page will change.
+    *@
+
+    <title>@ViewBag.Title - INF272 Samples</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+
+    @* ---------------------------------------------- *@
+    @* Navigation is rendered once - begin navigation *@
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("Simple Starting Sample", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+
+                    @*  The "@" grabs the C# and gives an Action
+                        Actual Text is "Home" whilst it
+                        references the "Index" View
+                        called by the "Home"Controller
+                    *@
+
+                    @*<li>@Html.ActionLink("Home", "Index", "Home")</li>*@
+
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                            List of People<span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            @*-----------------------------------------------------------------------------------*@
+                            <li>@Html.ActionLink("Complete List Of People", "ListPeople", "People")</li> @*added to the menu*@
+                            <li><a href="~/HTML/Person01.html">Person 01</a></li>
+                            <li><a href="~/HTML/Person02.html">Person 02</a></li>
+                            <li><a href="~/HTML/Person03.html">Person 03</a></li>
+                            <li><a href="~/HTML/Person04.html">Person 04</a></li>
+                            <li><a href="~/HTML/Person05.html">Person 05</a></li>
+                            @*-----------------------------------------------------------------------------------*@
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    @* End navigation *@
+    @* ---------------------------------------------- *@
+
+    <div class="container body-content">
+
+        @* This renders the entire view being displayed *@
+        @* This depends on the ActionLink selected *@
+
+
+        @RenderBody()
+
+
+        <hr />
+
+
+        @* Begin copyright footer if you have some *@
+        <footer>
+            <p>&copy; @DateTime.Now.Year - INF272 Samples</p>
+        </footer>
+        @* End copyright folder if you have some *@
+    </div>
+
+
+    @* All the scripts being used or bundled such as in this case
+        ** jquery
+        ** bootstrap
+        ** scripts
+
+        Usually in HTML
+        <script src ="~/scripts/bootstrap.js"></scripts>
+        ~ indicates root from folder so where is it?
+        It is in "App_Start" in BundleConfig.cs
+        and BundleConfid is referencing the Scripts Folder.
+
+    *@
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+
+
+    @* Render whatever you want to render last such as custom JavaScript *@
+    @RenderSection("scripts", required: false)
+</body>
+</html>
+
+

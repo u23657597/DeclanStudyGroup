@@ -1,0 +1,61 @@
+﻿@* Interface Enumarable = Enumarate or list (to ascertain the number of : count) *@
+
+@model IEnumerable<S1L04.Models.PersonModel>
+
+@{
+    ViewBag.Title = "List of People";
+}
+
+<h2>List of People</h2>
+
+
+<table class="table table-bordered">
+
+    <tr style="background-color: darkgreen; color: white; ">
+        <th width="20%">
+            @Html.DisplayNameFor(model => model.StuNumber)
+        </th>
+        <th width="20%">
+            @Html.DisplayNameFor(model => model.FirstName)
+        </th>
+        <th width="20%">
+            @Html.DisplayNameFor(model => model.LastName)
+        </th>
+        <th class="text-center" width="20%">
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+        
+        <th class="text-center" width="20%">
+            @Html.DisplayNameFor(model => model.myLink)
+        </th>
+    </tr>
+
+    @foreach (var item in Model) //For each person
+        {
+<tr>
+    <td width="20%">
+        @Html.DisplayFor(modelItem => item.StuNumber)
+    </td>
+    <td width="20%">
+        @Html.DisplayFor(modelItem => item.FirstName)
+    </td>
+    <td width="20%">
+        @Html.DisplayFor(modelItem => item.LastName)
+    </td>
+    <td class="text-center" width="20%">
+        @Html.DisplayFor(modelItem => item.Email)
+    </td>
+    @*<td class="text-center" width="20%">
+        @Html.DisplayFor(modelItem => item.myLink)
+    </td>*@
+    <td class="text-center" width="20%">
+        <a href=@Href(item.myLink) type="button" class="btn btn-success btn-sm" >
+            &nbsp;
+            @*<span class="glyphicon glyphicon-link"></span>*@
+            &nbsp;&nbsp;&nbsp;<strong>LINK</strong>&nbsp;&nbsp;&nbsp;&nbsp;
+        </a>
+    </td>
+</tr>
+        }
+</table>
+

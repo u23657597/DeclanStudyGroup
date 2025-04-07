@@ -1,0 +1,96 @@
+﻿@*  Here is this property and assign it this value
+    Grab anything you want to grab
+    Put any property in the viewbag as much as we want
+    Such as Viewbag.Whatever = "Foo";
+*@
+
+
+@{
+    ViewBag.Title = "Home Page";
+    //ViewBag.Whatever = "Foo"; >> Not being used now. The view collection called "Foo"
+    //is not being used or called.
+
+}
+
+<script src="~/Scripts/jquery.min.js"></script>
+<link href="~/Content/jquery-ui.css" rel="stylesheet" />
+<script src="~/Scripts/jquery-ui.min.js"></script>
+
+
+
+
+<div class="well-sm">
+    <h1 style="text-align: right">INF 272 Samples | Examples.</h1>
+</div>
+
+
+<div id="accordion">
+    <h4 style="background-color: lightgreen;"><strong>Visual Studio</strong></h4>
+    <div>
+        <span class="glyphicon glyphicon-link"></span>
+        <a href="https://learn.microsoft.com/en-us/visualstudio/get-started/visual-studio-ide?view=vs-2022">The Visual Studio IDE.</a>
+        <br />
+        <span class="glyphicon glyphicon-link"></span>
+        <a href="https://learn.microsoft.com/en-us/visualstudio/windows/?view=vs-2022" target="_blank">Visual Studio documentation.</a>
+        <br />
+        <span class="glyphicon glyphicon-link"></span>
+        <a href="https://learn.microsoft.com/en-us/dotnet/csharp/" target="_blank">C# documentation.</a>
+        <br />
+        <span class="glyphicon glyphicon-link"></span>
+        <a href="https://learn.microsoft.com/en-us/visualstudio/version-control/?view=vs-2022" target="_blank">Visual Studio version control.</a>
+    </div>
+
+    <h4 style="background-color: lightgreen;"><strong>Active Server Pages Network Enabled Technologies (ASP.NET) Model-View-Controller MVC. </strong></h4>
+    <div>
+        <span class="glyphicon glyphicon-link"></span>
+        <a href="https://learn.microsoft.com/en-us/aspnet/mvc/overview/getting-started/introduction/getting-started" target="">Getting started with ASP.NET MVC.</a>
+        <br />
+        <span class="glyphicon glyphicon-link"></span>
+        <a href="https://dotnettutorials.net/course/asp-dot-net-mvc-tutorials/" target="_blank">ASP.NET MVC Tutorial For Beginners and Professionals.</a>
+        <br />
+        <span class="glyphicon glyphicon-link"></span>
+        <a href="https://www.tutorialspoint.com/asp.net_mvc/index.htm" target="_blank">ASP.NET MVC Tutorial.</a>
+    </div>
+
+    <h4 style="background-color: lightgreen;"><strong>Hyper Text Markup Language (HTML) and Cascading Style Sheets (CSS).</strong></h4>
+    <div>
+        <span class="glyphicon glyphicon-link"></span>
+        <a href="https://www.codecademy.com/learn/learn-html" target="">Learn HTML.</a>
+        <br />
+        <span class="glyphicon glyphicon-link"></span>
+        <a href="https://www.w3schools.com/html/" target="_blank">HTML Tutorial.</a>
+        <br />
+        <span class="glyphicon glyphicon-link"></span>
+        <a href="https://www.codecademy.com/learn/learn-css" target="_blank">Learn CSS.</a>
+        <br />
+        <span class="glyphicon glyphicon-link"></span>
+        <a href="https://www.tutorialspoint.com/asp.net_mvc/index.htm" target="_blank">CSS Tutorial.</a>
+
+    </div>
+</div>
+
+<script type="text/javascript">
+
+    $("#accordion").accordion({
+        // Slide animation or not or length
+        animate: 500,
+        // Starting tab
+        active: false,
+        // Collapsible if same tab is clicked
+        collapsible: true,
+        // Event that triggers
+        event: "click",
+        // Height based on content (content) or largest (auto)
+        heightStyle: "content"
+    });
+
+</script>
+
+
+@* IF you have......This will be rendered after "RenderSection in _Layout.cshtml *@
+@* @section Scripts{
+    <script type="text/javascript">
+        $.....
+    </script>
+    }
+*@

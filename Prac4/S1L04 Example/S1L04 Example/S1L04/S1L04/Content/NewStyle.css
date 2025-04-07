@@ -1,0 +1,111 @@
+﻿html,
+body {
+    margin-left: 5%;
+    margin-right: 5%;
+    font-family: Arial, Helvetica, sans-serif;
+    /*background-color: rgb(128, 255, 128);*/
+    background-color: darkseagreen
+}
+
+.menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    font-weight: bold;
+    margin-left: 1%;
+    margin-right: 1%;
+}
+
+.m_item {
+    float: left;
+    border-right: 1px solid #bbb;
+    /*display:inline;*/
+}
+
+    .m_item:last-child {
+        border-right: none;
+    }
+
+    .m_item a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+        .m_item a:hover:not(.active) {
+            background-color: rgb(113, 113, 113);
+        }
+
+.active {
+    background-color: forestgreen;
+}
+
+.main-container {
+    height: 100%;
+    width: 100%;
+    background-color: rgb(230, 255, 230);
+    color: black;
+    padding-top: 2%;
+    box-sizing: border-box;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+#firstHeading {
+    padding: 15px;
+    position: sticky;
+    top: 0
+}
+
+hr {
+    color: darkgreen;
+    margin-left: 1%;
+    margin-right: 1%;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+div {
+    padding: 20px;
+    background-color: white;
+    border: 2px solid green;
+    display: inline-block;
+    margin: 1%;
+    width: 98%;
+    box-sizing: border-box;
+}
+
+center {
+    border: 5px solid;
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+}
+
+li {
+    display: inline;
+}
+
+td, th {
+    text-align: center;
+}
+
+table {
+    width: 60%;
+}
+
+/*img {
+    object-fit: fill;*/
+    /* You can also use cover instead of fill but they are different */
+/*}*/
+
+    img:hover {
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1);
+    }
